@@ -1,0 +1,19 @@
+configuration {
+  sidebar-mode:  true;
+  hide-scrollbar: true;
+  kb-cancel: "Escape,Control+bracketleft";
+  kb-mode-next: "Alt+Right,Shift+Right,Control+Tab";
+  kb-mode-previous: "Alt+Left,Shift+Left,Control+ISO_Left_Tab";
+  /* kb-row-select:; */
+  modi: "combi,drun,window,ssh";
+  combi-modi: "window,drun,Wallpapers:~/scripts/rofi/wallpaper.sh";
+  show: "combi";
+  monitor: "-4";
+  terminal: "alacritty";
+  display-window: "Window";
+  display-drun: "Search";
+}
+@theme "themes/oxide/oxide"
+listview {
+  lines: 12;
+}

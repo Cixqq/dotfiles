@@ -54,7 +54,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # These 2 plugins are buggy and I don't like them anymore.
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh (BUGGY AND CRASHES)
+source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh # (BUGGY AND CRASHES)
 
 # Created by `pipx` on 2024-02-21 20:38:47
 export PATH="$PATH:/home/omar/.local/bin:/home/omar/.cargo/bin"

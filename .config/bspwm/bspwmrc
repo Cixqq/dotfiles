@@ -17,14 +17,14 @@ bspc config focused_border_color "#665c54"
 bspc config normal_border_color  "#282828"
 
 # Auto start.
+pgrep -x nitrogen > /dev/null || nitrogen --restore &
 ~/.config/polybar/launch.sh &
-pgrep -x nm-applet > /dev/null || nm-applet --indicator &
 pgrep -x dunst > /dev/null || dunst &
 pgrep -x picom > /dev/null || picom &
 pgrep -x greenclip > /dev/null || greenclip daemon &
+pgrep -x nm-applet > /dev/null || nm-applet --indicator &
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x conky > /dev/null || $HOME/.config/conky/toggle.sh &
-pgrep -x nitrogen > /dev/null || nitrogen --restore &
 
 # Set another keyboard layout.
 setxkbmap -layout us,ara -option grp:alt_shift_toggle

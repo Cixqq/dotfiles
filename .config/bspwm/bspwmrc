@@ -32,6 +32,6 @@ setxkbmap -layout us,ara -option grp:alt_shift_toggle
 # BSPWM rules.
 bspc rule -a '*' state=floating
 bspc rule -a Alacritty state=tiled desktop='^2'
-bspc rule -a firefox state=tiled
+bspc rule -a firefox state=tiled desktop='^1'
 bspc rule -a firefox:Devtools state=floating
 bspc rule -a firefox:Places state=floating

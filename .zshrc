@@ -52,8 +52,8 @@ alias batman="sudo pacman"
 # Git related aliases.
 alias gadd="git add ."
 alias gcom="git commit -m"
-alias gpush="git push"
-alias gpusho="git push origin"
+alias gpsh="git push"
+alias gpsho="git push origin"
 
 # Loading plugins.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -44,7 +44,7 @@ window {
     border-radius: 0px;
     border: 1px;
     border-color: @gruv10;
-    height: 451px;
+    height: 435px;
     width: 600px;
 
     background-color: @transparent;

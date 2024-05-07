@@ -1,0 +1,130 @@
+// # z0mbi3 -  https://github.com/gh0stzk/dotfiles
+
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+    font:                        "Fira Code Nerd Font 12";
+
+    //hover-select:              true;
+    //me-select-entry:           "";
+    //me-accept-entry:           "MousePrimary";
+}
+
+//----- Global Properties -----//
+
+* {
+    main-bg: #282828;
+    main-fg: #fbf1c7;
+    select-bg: #665c54;
+    select-fg: #fbf1c7;
+}
+
+//----- Main Window -----//
+
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       50%;
+    cursor:                      "default";
+    spacing:                     0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               0px;
+    border-color:                transparent;
+    background-color:            transparent;
+}
+
+//----- Main Box -----//
+
+mainbox {
+    enabled:                     true;
+    children:                    [ inputbar, message, listview ];
+    background-color:            @main-bg;
+}
+/*****----- Inputbar -----*****/
+message {
+    padding: 10px;
+    /* border:  0px 2px 2px 2px; */
+    border-color: @gruv0;
+    background-color: @gruv7;
+}
+
+inputbar {
+    color: @gruv6;
+    padding: 14px;
+    background-color: @gruv0;
+    border-color: @gruv0;
+
+    border: 1px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0px 0em 0em 0em;
+}
+//----- Listview -----//
+
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       2;
+    spacing:                     10px;
+    padding:                     10px 20px;
+    cycle:                       true;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+//----- Elements -----//
+
+element {
+    enabled:                     true;
+    orientation:                 horizontal;
+    spacing:                     0px;
+    padding:                     0px;
+    border-radius:               20px;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+@media(max-aspect-ratio: 1.8) {
+    element {
+        orientation:             vertical;
+    }
+}
+
+element selected.normal {
+    background-color:            @select-bg;
+    text-color:                  @select-fg;
+}
+
+element-icon {
+    size:                        200px;
+    cursor:                      inherit;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    padding:                     20px;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}

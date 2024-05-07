@@ -54,6 +54,7 @@ alias gadd="git add ."
 alias gcom="git commit -m"
 alias gpsh="git push"
 alias gpsho="git push origin"
+alias gdiff="git diff"
 
 # Loading plugins.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

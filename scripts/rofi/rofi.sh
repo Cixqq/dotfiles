@@ -4,6 +4,7 @@
 wlppr='󰃥  Change Wallpaper'
 power='  Power Menu'
 launcher='󱓞  Application Launcher'
+window='  Switch Window'
 clipboard='󱉬  Open Clipboard'
 screenshot='󰹑  Take Screenshot'
 emoji='󰞅  Open Emoji Selector'
@@ -17,7 +18,7 @@ rofi_cmd() {
 
 # The run command.
 run_rofi() {
-    echo -en "$launcher\n$wlppr\n$terminal\n$clipboard\n$calc\n$screenshot\n$emoji\n$power" | rofi_cmd
+    echo -en "$launcher\n$window\n$wlppr\n$terminal\n$clipboard\n$calc\n$screenshot\n$emoji\n$power" | rofi_cmd
 }
 
 selected="$(run_rofi)"
@@ -45,5 +46,8 @@ case ${selected} in
     ;;
     $calc)
 	  rofi -show calc -modi calc -no-show-match -no-sort
+    ;;
+    $window)
+	rofi -show window -display-window "󱗼 "
     ;;
 esac

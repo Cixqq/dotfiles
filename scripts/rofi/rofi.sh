@@ -10,6 +10,7 @@ screenshot='󰹑  Take Screenshot'
 emoji='󰞅  Open Emoji Selector'
 terminal='  Open Terminal'
 calc='  Open Calculator'
+todo='  Open Todo'
 
 # Rofi command.
 rofi_cmd() {
@@ -18,7 +19,7 @@ rofi_cmd() {
 
 # The run command.
 run_rofi() {
-    echo -en "$launcher\n$window\n$wlppr\n$terminal\n$clipboard\n$calc\n$screenshot\n$emoji\n$power" | rofi_cmd
+    echo -en "$launcher\n$window\n$wlppr\n$terminal\n$clipboard\n$calc\n$todo\n$screenshot\n$emoji\n$power" | rofi_cmd
 }
 
 selected="$(run_rofi)"
@@ -49,5 +50,8 @@ case ${selected} in
     ;;
     $window)
 	rofi -show window -display-window "󱗼 "
+    ;;
+    $todo)
+	planify
     ;;
 esac

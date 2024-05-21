@@ -1,0 +1,9 @@
+#!/bin/bash
+
+TODAY_USAGE=$(vnstat -i wlp0s29f7u2 | grep "today" | awk '{print $8 " "substr ($9, 1, 1)}')
+YESTERDAY_USAGE=$(vnstat -i wlp0s29f7u2 | grep "yesterday" | awk '{print $8 " "substr ($9, 1, 1)}')
+MONTHLY_USAGE=$(vnstat -i wlp0s29f7u2 -m | grep "`date +"%Y-%m"`" | awk '{print $8 " "substr($9, 1, 1)}')
+
+printf "%-25s %-10s\n" "TODAYS USAGE: " "$TODAY_USAGE"
+printf "%-25s %-10s\n" "YESTERDAYS USAGE: " "$YESTERDAY_USAGE"
+printf "%-25s %-10s\n" "CURRENT MONTHS USAGE: " "$MONTHLY_USAGE"

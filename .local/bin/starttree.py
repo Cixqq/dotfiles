@@ -1,1 +1,0 @@
-/home/omar/repos/StartTree/generate.py

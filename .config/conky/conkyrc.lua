@@ -66,8 +66,8 @@ ${color lightgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
 ${color lightgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 $hr
 ${color grey}${goto 5}Today ${goto 140}Yesterday ${goto 285}Month ${color green}
-${execi 300 vnstat -i wlp0s29f7u2 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 140}${execi 300 vnstat -i wlp0s29f7u2 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 285}${execi 300 'vnstat -i wlp0s29f7u2 -m | grep "`date +"%Y-%m"`" | awk '{print $8 " "substr($9, 1, 1)}''}
-${color grey}Down: ${color green}${downspeed wlp0s29f7u2}/s ${color grey}${goto 220}Up: ${color green}${upspeed wlp0s29f7u2}/s
-${downspeedgraph wlp0s29f7u2 25,190 000000 ff0000} ${alignr}${upspeedgraph wlp0s29f7u2 25,190 000000 00ff00}$color
-Total RX: ${color green}${totaldown wlp0s29f7u2} $color${alignr}Total TX: ${color green}${totalup wlp0s29f7u2}
+${execi 300 vnstat -i wlp0s20u7 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 140}${execi 300 vnstat -i wlp0s20u7 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 285}${execi 300 'vnstat -i wlp0s20u7 -m | grep "`date +"%Y-%m"`" | awk '{print $8 " "substr($9, 1, 1)}''}
+${color grey}Down: ${color green}${downspeed wlp0s20u7}/s ${color grey}${goto 220}Up: ${color green}${upspeed wlp0s20u7}/s
+${downspeedgraph wlp0s20u7 25,190 000000 ff0000} ${alignr}${upspeedgraph wlp0s20u7 25,190 000000 00ff00}$color
+Total RX: ${color green}${totaldown wlp0s20u7} $color${alignr}Total TX: ${color green}${totalup wlp0s20u7}
 ]]

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Path to wallpaper folders
+# Path of the wallpaper folder.
 WALLPAPERS=$HOME/wallpapers
 rofi_cmd() {
     rofi -dmenu -theme ${HOME}/.config/rofi/configs/wallpaper.rasi -p "Select a wallpaper: "
